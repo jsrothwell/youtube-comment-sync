@@ -1,0 +1,116 @@
+/* Main Container */
+#yt-comments-wrapper {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    margin: 2em 0;
+}
+
+.yt-comments-title {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5em;
+}
+
+/* Loader */
+.yt-comments-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+.yt-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Comments List */
+.yt-comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.yt-comment-thread {
+    display: flex;
+    flex-direction: column;
+}
+
+.yt-comment {
+    display: flex;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+.yt-author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.yt-comment-content {
+    flex: 1;
+}
+
+.yt-comment-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+    margin-bottom: 0.25em;
+}
+
+.yt-author-name {
+    font-weight: 600;
+    font-size: 0.9em;
+    text-decoration: none;
+    color: #333;
+}
+.yt-author-name:hover {
+    text-decoration: underline;
+}
+
+.yt-comment-date {
+    font-size: 0.8em;
+    color: #666;
+}
+
+.yt-comment-text {
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin: 0;
+    color: #444;
+}
+
+/* Replies */
+.yt-comment-replies {
+    margin-left: 3.2em; /* Aligns with comment text */
+    padding-left: 1em;
+    border-left: 2px solid #e9e9e9;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/* Utility Classes */
+.yt-no-comments, .yt-error-message {
+    text-align: center;
+    color: #777;
+    background-color: #f9f9f9;
+    padding: 2em;
+    border-radius: 8px;
+}
+
+.yt-error-message {
+    background-color: #fff5f5;
+    color: #c53030;
+    border: 1px solid #fed7d7;
+}
